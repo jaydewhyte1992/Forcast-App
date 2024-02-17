@@ -1,6 +1,6 @@
 body {
   background-color: #f9f7fe;
-  font-family: "Roboto", sans-serif;
+  font-family: monospace;
 }
 a {
   color: grey;
@@ -71,7 +71,7 @@ main {
 }
 strong {
   color: rgb(203, 95, 113);
-  font-style: italic;
+  margin-left: -5px;
 }
 footer {
   border-top: 1px solid #f9f7fe;
