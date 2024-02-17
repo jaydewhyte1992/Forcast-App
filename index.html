@@ -17,21 +17,32 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Melbourne</h1>
-          <p>
-            Saturday 11:43, scattered clouds
-            <br />
-            Humidity: 66%, Wind 5.3km/h
-          </p>
+        <div class="weather-data">
+          <div>
+            <h1 class="weather-city">Melbourne</h1>
+            <p class="weather-details">
+              Saturday 11:43, scattered clouds
+              <br />
+              Humidity: <strong>66%</strong>, Wind <strong>5.3km/h</strong>
+            </p>
+          </div>
+          <div class="weather-temperature-container">
+            <div class="weather-icon">🌞</div>
+            <div class="weather-temp">24</div>
+            <div class="weather-unit">°C</div>
+          </div>
         </div>
-        <div>🌞24°C</div>
       </main>
       <footer>
         Coded by
