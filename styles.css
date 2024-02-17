@@ -26,6 +26,7 @@ header {
   width: 80%;
   padding: 15px 20px;
   font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .search-form-button {
   background-color: hotpink;
@@ -36,6 +37,11 @@ header {
   color: white;
   margin-left: 5px;
 }
+.search-form-button:hover {
+  opacity: 0.5;
+  transition: all ease-in-out 200ms;
+  cursor: pointer;
+}
 .weather-data {
   display: flex;
   justify-content: space-between;
@@ -45,20 +51,23 @@ main {
 }
 .weather-city {
   margin: 0;
-  font-size: 38px;
+  font-size: 45px;
+  font-weight: bold;
   line-height: 48px;
+  font-family: "Roboto", sans-serif;
 }
 .weather-details {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 500;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
 }
 .weather-temperature-container {
   display: flex;
 }
 .weather-temp {
   font-size: 88px;
-  font-weight: bold;
+  font-weight: lighter;
   margin-left: 10px;
 }
 .weather-icon {
@@ -71,7 +80,7 @@ main {
 }
 strong {
   color: rgb(203, 95, 113);
-  margin-left: -5px;
+  margin-left: 0px;
 }
 footer {
   border-top: 1px solid #f9f7fe;
