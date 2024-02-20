@@ -112,13 +112,19 @@ main {
   font-size: 15px;
 }
 .weather-forecast-temperature-min {
-  opacity: 0.5;
+  opacity: 0.7;
   font-size: 13px;
+  color: #c58f2b;
+}
+
+.weather-forecast.night .weather-forecast-temperature-min {
+  color: #052436;
 }
 
 .weather-forecast-icon {
-  font-size: 30px;
-  padding: 8px;
+  width: 88px;
+  height: 88px;
+  display: block;
 }
 .day strong {
   color: #cc8705;
