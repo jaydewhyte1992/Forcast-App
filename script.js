@@ -11,10 +11,16 @@ function refreshWeather(response) {
 
   let currentHour = dateElement.getHours();
   let body = document.body;
-  if (currentHour >= 6 && currentHour < 18) {
-    body.classList.add("day");
-  } else {
+  let button = document.querySelector(".search-form-button");
+
+  if (currentHour >= 18 || currentHour < 6) {
+    body.classList.remove("day");
     body.classList.add("night");
+    button.classList.add("night");
+  } else {
+    body.classList.remove("night");
+    body.classList.add("day");
+    button.classList.remove("night");
   }
 
   cityElement.innerHTML = response.data.city;
