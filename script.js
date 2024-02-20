@@ -6,9 +6,16 @@ function refreshWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let speedElement = document.querySelector("#speed");
   let timeElement = document.querySelector("#time");
+  let iconElement = document.querySelector("#icon");
   let dateElement = new Date(response.data.time * 1000);
 
-  let iconElement = document.querySelector("#icon");
+  let currentHour = dateElement.getHours();
+  let body = document.body;
+  if (currentHour >= 6 && currentHour < 18) {
+    body.classList.add("day");
+  } else {
+    body.classList.add("night");
+  }
 
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(dateElement);
@@ -70,7 +77,7 @@ function displayForecast() {
       <span class="weather-forecast-temperature">
         <strong>15°</strong>
       </span>
-      <span class="weather-forecast-temperature">9°</span>
+      <span class="weather-forecast-temperature-min">9°</span>
     </div>
   </div>`;
   });
